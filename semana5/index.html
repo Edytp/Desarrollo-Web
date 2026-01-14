@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Galería de Imágenes . </h1>
+        <p>Agrega una imagen desde una URL</p>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <label for="urlImagen">URL de la imagen :</label>
+            <input type="url" id="urlImagen" placeholder="https://example.com/imagen.jpg">
+        </section>
+
+        <div class="botones">
+            <button id="btnAgregar">Agregar Imagen</button>
+            <button id="btnEliminar">Eliminar Imagen Seleccionada</button>
+        </div>
+
+        <section>
+            <h2>GALERÍA</h2>
+            <div id="galeria" class="gallery"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

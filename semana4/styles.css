@@ -1,0 +1,134 @@
+/* ==========================
+   GLOBAL RESET Y BASE
+   ========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ==========================
+   TITULOS PRINCIPALES
+   ========================== */
+h1 {
+    color: #19437D; /* Azul Elegante */
+    text-align: center;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 4px rgba(25, 67, 125, 0.3);
+}
+
+h2 {
+    color: #4A9E24; /* Verde Elegante */
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+h3 {
+    color: #19437D;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* ==========================
+   BOTONES PERSONALIZADOS
+   ========================== */
+.btn-primary {
+    background-color: #19437D; /* Azul Elegante */
+    border-color: #19437D;
+    color: #fff;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #16386b;
+    transform: scale(1.06);
+    box-shadow: 0 4px 12px rgba(25, 67, 125, 0.25);
+}
+
+/* ==========================
+   NAVBAR PERSONALIZADA
+   ========================== */
+.navbar {
+    background-color: #19437D; /* Azul elegante para navbar */
+}
+
+.navbar a.nav-link {
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+
+.navbar a.nav-link:hover {
+    color: #4A9E24; /* Verde elegante al hover */
+}
+
+/* ==========================
+   CARDS / SECCIONES
+   ========================== */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* ==========================
+   FORMULARIO
+   ========================== */
+.form-control {
+    border-radius: 6px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #4A9E24; /* Verde elegante al enfocar */
+    box-shadow: 0 0 6px rgba(74, 158, 36, 0.35);
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+footer {
+    background-color: #f8f9fa;
+}
+
+footer a {
+    color: #19437D;
+    text-decoration: none;
+    margin: 0 0.6rem;
+    transition: 0.3s ease;
+}
+
+footer a:hover {
+    color: #4A9E24; /* Verde elegante al hover */
+    transform: scale(1.05);
+}
+
+/* ==========================
+   MEDIA QUERY PARA MÓVILES
+   ========================== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    .btn-primary {
+        width: 100%;
+    }
+}

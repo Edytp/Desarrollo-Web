@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTFO - MECÁNICA AUTOMOTRIZ</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+
+</head>
+<body>
+   <H1>INSTITUTO SUPERIOR TECNOLÓGICO "FRANCISCO DE ORELLANA</H1> 
+    <H2>CARRERA DE MECÁNICA AUTOMOTRIZ</H2>
+    <H3>BIENVENIDOS A LA PÁGINA OFICIAL DEL ISTFO - MECÁNICA AUTOMOTRIZ</H3>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container">
+    <!-- Logo o Nombre -->
+    <a class="navbar-brand" href="#">ISTFO - Mecánica</a>
+
+    <!-- Botón -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido"
+      aria-controls="navbarContenido" aria-expanded="false" aria-label="Alternar navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Enlaces del menú -->
+    <div class="collapse navbar-collapse" id="navbarContenido">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#inicio">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#carrera">Carrera</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="seccion-carreras" class="container my-5">
+  <div class="row g-4">
+  
+    <!-- Columna 1 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+         <img src="img1/general.png" class="img-fluid card-img-top" alt="Imagen representativa 1">
+        <div class="card-body">
+          <h3 class="card-title">Mecánica General</h3>
+          <p class="card-text">Formación en diagnóstico y reparación de motores y sistemas mecánicos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna 2 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="img2/electrico.jpg" class="img-fluid card-img-top" alt="Imagen representativa 2">
+        <div class="card-body">
+          <h3 class="card-title">Sistemas Eléctricos</h3>
+          <p class="card-text">Aprende sobre circuitos y sistemas eléctricos automotrices modernos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna 3 -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="img3/tecnologia.png" class="img-fluid card-img-top" alt="Imagen representativa 3">
+        <div class="card-body">
+          <h3 class="card-title">Tecnología Avanzada</h3>
+          <p class="card-text">Capacitación en sistemas de diagnóstico digital y electrónica automotriz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="seccion-formulario" class="container my-5">
+  <h2 class="text-center mb-4">Contacto</h2>
+
+  <form>
+    <!-- Campo Nombre -->
+    <div class="form-group mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" id="nombre" class="form-control" placeholder="Ingresa tu nombre">
+    </div>
+
+    <!-- Campo Email -->
+    <div class="form-group mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" id="email" class="form-control" placeholder="nombre@ejemplo.com">
+    </div>
+
+    <!-- Campo Comentarios -->
+    <div class="form-group mb-3">
+      <label for="comentarios" class="form-label">Comentarios</label>
+      <textarea id="comentarios" class="form-control" rows="4" placeholder="Escribe aquí tus comentarios"></textarea>
+    </div>
+
+    <!-- Botón de Envío -->
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</section>
+
+<div class="container text-center my-4">
+    <!-- Botón que activa el collapse -->
+    <button class="btn btn-primary" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#infoAdicional"
+        aria-expanded="false"
+        aria-controls="infoAdicional">
+        Mostrar / Ocultar Información
+    </button>
+
+    <!-- Contenido que se oculta y muestra -->
+    <div class="collapse mt-3" id="infoAdicional">
+        <div class="card card-body">
+            <h4>Información adicional</h4>
+            <p>
+                Esta es una sección que puedes mostrar u ocultar usando Bootstrap Collapse con animación.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-light text-center py-4">
+  <div class="container">
+    <p class="mb-2">© 2026 Instituto Superior Tecnológico "Francisco de Orellana"</p>
+    <a href="#" class="text-decoration-none me-3">Inicio</a>
+    <a href="#" class="text-decoration-none me-3">Nosotros</a>
+    <a href="#" class="text-decoration-none me-3">Carrera</a>
+    <a href="#" class="text-decoration-none">Contacto</a>
+  </div>
+</footer>
+
+
+</body>
+</html>

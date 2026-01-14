@@ -1,0 +1,193 @@
+/* ===== Colores personalizados ===== */
+:root {
+    --color-azul: #007bff;      /* Azul vivo */
+    --color-verde: #28a745;     /* Verde alegre */
+    --color-amarillo: #ffc107;  /* Amarillo brillante */
+    --color-fondo: #f0f8ff;     /* Fondo muy claro azul */
+    --color-texto: #212529;
+    --color-borde: #0069d9;
+    --color-tabla-header: #0056b3;
+    --color-tabla-fila: #e3f2fd;
+    --color-form-bg: #ffffff;
+}
+
+/* ===== Estilos base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 20px;
+}
+
+/* ===== Encabezados ===== */
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--color-azul);
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: var(--color-verde);
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: var(--color-amarillo);
+    margin-bottom: 10px;
+}
+
+/* ===== Imágenes y Video ===== */
+img {
+    display: block;
+    max-width: 100%;
+    margin: 15px auto;
+}
+
+video {
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    border: 4px solid var(--color-azul);
+    border-radius: 8px;
+}
+
+/* ===== Párrafos ===== */
+p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* ===== Navegación ===== */
+nav {
+    text-align: center;
+    margin: 18px 0;
+    font-size: 1.1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-azul);
+    margin: 0 8px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-verde);
+}
+
+/* ===== Listas ===== */
+ul {
+    list-style-type: none;
+    margin: 15px 0;
+    padding-left: 0;
+}
+
+ul li {
+    background-color: var(--color-tabla-fila);
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-left: 4px solid var(--color-verde);
+}
+
+/* ===== Tabla ===== */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid var(--color-azul);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+}
+
+th {
+    background-color: var(--color-tabla-header);
+    color: white;
+    text-align: center;
+}
+
+td {
+    background-color: var(--color-tabla-fila);
+}
+
+/* Alternancia de filas */
+tr:nth-child(even) td {
+    background-color: #d0e8ff;
+}
+
+/* ===== Formulario ===== */
+form {
+    width: 80%;
+    margin: 20px auto;
+    padding: 16px;
+    background-color: var(--color-form-bg);
+    border: 2px solid var(--color-verde);
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 8px;
+    color: var(--color-azul);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    background-color: var(--color-amarillo);
+    color: var(--color-texto);
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-verde);
+    color: white;
+}
+
+/* ===== Enlaces externos ===== */
+a {
+    color: var(--color-azul);
+}
+
+a:hover {
+    color: var(--color-verde);
+}
+
+/* ===== Pie de página ===== */
+footer {
+    text-align: center;
+    margin-top: 25px;
+    padding: 10px;
+    color: white;
+    background-color: var(--color-azul);
+}
+
