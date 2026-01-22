@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Validación Dinámica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="formulario">
+        <h2>Registro de Usuario</h2>
+
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <small class="error" id="error-nombre"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo">
+            <small class="error" id="error-correo"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password">
+            <small class="error" id="error-password"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword">Confirmar Contraseña:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+            <small class="error" id="error-confirmPassword"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad">
+            <small class="error" id="error-edad"></small>
+        </div>
+
+        <button type="submit" id="btnEnviar" disabled>Enviar</button>
+        <button type="reset" id="btnReset">Reiniciar</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
