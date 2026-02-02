@@ -1,0 +1,17 @@
+body {
+    background-color: #0f0f0f;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+    color: silver;
+}
+
+.btn-outline-light:hover {
+    background-color: silver;
+    color: black;
+}
+
+footer {
+    border-top: 1px solid silver;
+}
