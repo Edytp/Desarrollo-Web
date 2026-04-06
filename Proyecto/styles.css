@@ -1,0 +1,52 @@
+body{
+background:#1c1c1c;
+color:white;
+}
+
+header{
+background:#2b2b2b;
+}
+
+.card{
+background:#333;
+color:white;
+border-radius:10px;
+}
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+justify-content:center;
+}
+
+.gallery img{
+width:200px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.1);
+}
+
+.selected{
+border:5px solid orange;
+}
+
+.error{
+color:red;
+font-size:14px;
+}
+
+#listaProductos{
+list-style:none;
+padding:0;
+}
+
+#listaProductos li{
+background:#2b2b2b;
+margin:10px;
+padding:10px;
+border-radius:8px;
+}
