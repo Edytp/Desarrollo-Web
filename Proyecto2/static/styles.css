@@ -1,0 +1,12 @@
+body{
+font-family: Arial;
+background:#1c1c1c;
+color:white;
+text-align:center;
+}
+
+nav a{
+color:orange;
+margin:10px;
+text-decoration:none;
+}
