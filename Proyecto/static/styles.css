@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="text-center mb-4">Cursos Disponibles</h2>
+<div class="row">
+    {% for curso in cursos %}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">{{ curso[1] }}</h5>
+                <p><strong>Precio:</strong> ${{ curso[2] }}</p>
+                <p><strong>Duración:</strong> {{ curso[3] }}</p>
+                <p><strong>Fecha inicio:</strong> {{ curso[4] }}</p>
+                <p><strong>Horario:</strong> {{ curso[5] }}</p>
+                {% if 'usuario_id' in session %}
+                <a href="{{ url_for('inscribirse', curso_id=curso[0]) }}" class="btn btn-primary w-100">Inscribirse</a>
+                {% else %}
+                <p class="text-danger">Debes ingresar para inscribirte</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
