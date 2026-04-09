@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - INNOVAKIDS</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f9fa; margin:0; padding:0; }
+        header { background-color: #0d6efd; color: white; padding: 20px; text-align: center; }
+        header a { color: white; margin-left: 15px; text-decoration: none; font-weight: bold; }
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+        h2 { color: #0d6efd; }
+        .cursos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .curso { background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.2s; }
+        .curso:hover { transform: scale(1.03); }
+        .curso img { width: 100%; height: 200px; object-fit: cover; }
+        .curso-content { padding: 15px; }
+        .curso-content h3 { margin: 0 0 10px 0; }
+        .curso-content p { margin: 5px 0; color: #555; }
+        .curso-content .precio { font-weight: bold; color: #198754; }
+        .btn { display: inline-block; margin-top: 10px; padding: 8px 15px; background-color: #0d6efd; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.2s; }
+        .btn:hover { background-color: #0b5ed7; }
+        .alert { padding: 10px; margin-bottom: 15px; border-radius: 5px; }
+        .alert.success { background-color: #198754; color: white; }
+        .alert.info { background-color: #0dcaf0; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dashboard - Bienvenido {{ session['usuario_nombre'] }}</h1>
+        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="{{ url_for('logout') }}">Cerrar Sesión</a>
+    </header>
+
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <h2>Cursos Disponibles</h2>
+        <div class="cursos">
+            {% for curso in cursos %}
+            <div class="curso">
+                <img src="{{ url_for('static', filename=curso['imagen']) }}" alt="{{ curso['titulo'] }}">
+                <div class="curso-content">
+                    <h3>{{ curso['titulo'] }}</h3>
+                    <p>{{ curso['descripcion'] }}</p>
+                    <p><strong>Duración:</strong> {{ curso['duracion'] }}</p>
+                    <p><strong>Horario:</strong> {{ curso['horario'] }}</p>
+                    <p class="precio">$ {{ curso['precio'] }}</p>
+                    {% if curso['id'] in inscritos %}
+                        <span class="btn" style="background-color:#198754;">Inscrito</span>
+                    {% else %}
+                        <a href="{{ url_for('inscribirse', curso_id=curso['id']) }}" class="btn">Inscribirse</a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
