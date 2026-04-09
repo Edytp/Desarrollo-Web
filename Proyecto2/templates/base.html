@@ -10,25 +10,27 @@
 
 <nav>
     <a href="/">Inicio</a> |
-    <a href="/about">Acerca de</a> |
+    <a href="/contactos">Contactos</a> |
     <a href="/productos">Productos</a> |
-    <a href="/agregar">Agregar Producto</a>
+    <a href="/agregar">Agregar Producto</a> |
+    <a href="/datos">Datos Guardados</a>
 </nav>
 
 <hr>
-{% with mensajes = get_flashed_messages() %}
-{% if mensajes %}
 
-<ul>
-{% for m in mensajes %}
-<li>{{ m }}</li>
-{% endfor %}
-</ul>
-
-{% endif %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 {% endwith %}
+
 {% block content %}
 {% endblock %}
 
 </body>
 </html>
+

@@ -1,12 +1,19 @@
-body{
-font-family: Arial;
-background:#1c1c1c;
-color:white;
-text-align:center;
+body {
+    font-family: Arial;
+    margin: 40px;
 }
 
-nav a{
-color:orange;
-margin:10px;
-text-decoration:none;
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: blue;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+}
+
