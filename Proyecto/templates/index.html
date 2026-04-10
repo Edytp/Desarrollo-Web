@@ -99,12 +99,16 @@
             <a href="{{ url_for('index') }}">Inicio</a>
             <a href="{{ url_for('registro') }}">Registro</a>
             <a href="{{ url_for('login') }}">Ingresar</a>
+            <a href="{{ url_for('cursos_capacitacion') }}">Cursos de capacitación</a>            
         </nav>
     </header>
 
     <div class="container">
         <section>
             <h2>Sobre Nosotros</h2>
+            <img src="{{ url_for('static', filename='robotica_ninos.jpg') }}" 
+         style="width:100%; max-height:300px; object-fit:cover; border-radius:8px;">
+
             <p>INNOVAKIDS es un centro de capacitación especializado en tecnología para niños. Fomentamos la creatividad y el aprendizaje práctico mediante robótica, programación y ciencias aplicadas. Ubicados en Quito, buscamos que cada niño desarrolle habilidades STEM desde temprana edad.</p>
         </section>
 

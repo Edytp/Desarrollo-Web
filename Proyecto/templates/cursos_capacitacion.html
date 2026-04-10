@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="mb-4">Cursos de Capacitación</h1>
+
+{% for curso in cursos %}
+
+<h3>{{ curso.titulo }}</h3>
+
+<table class="table table-striped">
+
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Cédula</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% for estudiante in estudiantes_por_curso[curso.id] %}
+
+<tr>
+<td>{{ estudiante.nombre }}</td>
+<td>{{ estudiante.cedula }}</td>
+</tr>
+
+{% else %}
+
+<tr>
+<td colspan="2">No hay estudiantes inscritos aún</td>
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% endfor %}
+
+{% endblock %}

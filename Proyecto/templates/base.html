@@ -17,12 +17,13 @@
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url_for('cursos') }}">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('cursos_capacitacion') }}">Cursos de capacitacion</a></li>
                 {% if 'usuario_id' in session %}
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('dashboard') }}">Mis cursos</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Cerrar sesión</a></li>
                 {% else %}
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Ingresar</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Registrar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('registro') }}">Registro</a></li>
                 {% endif %}
             </ul>
         </div>

@@ -157,6 +157,36 @@ def logout():
     flash("Has cerrado sesión.", "info")
     return redirect(url_for('index'))
 
+
+# NUEVA RUTA
+@app.route('/cursos_capacitacion')
+def cursos_capacitacion():
+
+    conn = get_connection()
+
+    cursos = conn.execute("SELECT * FROM cursos").fetchall()
+
+    estudiantes_por_curso = {}
+
+    for curso in cursos:
+        estudiantes = conn.execute("""
+            SELECT usuarios.nombre, usuarios.cedula
+            FROM inscripciones
+            JOIN usuarios ON inscripciones.usuario_id = usuarios.id
+            WHERE inscripciones.curso_id = ?
+        """, (curso['id'],)).fetchall()
+
+        estudiantes_por_curso[curso['id']] = estudiantes
+
+    conn.close()
+
+    return render_template(
+        'cursos_capacitacion.html',
+        cursos=cursos,
+        estudiantes_por_curso=estudiantes_por_curso
+    )
+
+
 # ---------------------- Ejecutar app ----------------------
 if __name__ == "__main__":
     app.run(debug=True)
